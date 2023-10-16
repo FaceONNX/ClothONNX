@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	  <AssemblyName>ClothONNX</AssemblyName>
+	  <LangVersion>8.0</LangVersion>
+	  <Version>1.0.0.1</Version>
+	  <FileVersion>1.0.0.1</FileVersion>
+	  <Authors>Valery Asiryan</Authors>
+	  <Company>Valery Asiryan</Company>
+	  <Description>Cloth segmentation library based on deep neural networks and ONNX runtime.</Description>
+	  <Copyright>Valery Asiryan, © 2023</Copyright>
+	  <RepositoryType>Open-source</RepositoryType>
+	  <PackageId>ClothONNX</PackageId>
+	  <Product>ClothONNX</Product>
+	  <AssemblyVersion>1.0.0.1</AssemblyVersion>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageTags>cloth detection segmentation recognition onnx neural-networks unet</PackageTags>
+	  <RepositoryUrl>https://github.com/FaceONNX/ClothONNX</RepositoryUrl>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <PackageProjectUrl>https://github.com/FaceONNX/ClothONNX</PackageProjectUrl>
+	  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+	  <PackageIcon>ClothONNX.png</PackageIcon>
+	  <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="models\cloth_segmentation_unet.onnx" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.9.0" />
+		<PackageReference Include="UMapx" Version="5.2.7.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="models\cloth_segmentation_unet.onnx" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="ClothONNX.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="LICENSE.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
