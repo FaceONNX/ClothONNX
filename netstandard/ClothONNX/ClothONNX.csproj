@@ -22,6 +22,7 @@
 	  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 	  <PackageIcon>ClothONNX.png</PackageIcon>
 	  <NeutralLanguage>en</NeutralLanguage>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
