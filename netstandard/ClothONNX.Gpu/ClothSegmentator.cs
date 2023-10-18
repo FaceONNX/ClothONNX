@@ -69,7 +69,7 @@ namespace ClothONNX
 
             for (int i = 0; i < image.Length; i++)
             {
-                resized[i] = image[i].ResizeBilinear(size.Height, size.Width);
+                resized[i] = image[i].Resize(size.Height, size.Width, InterpolationMode.Bilinear);
             }
 
             var dimentions = new int[] { 1, 3, size.Width, size.Height };
@@ -113,7 +113,7 @@ namespace ClothONNX
                 }
             }
 
-            return mask.ResizeBilinear(height, width);
+            return mask.Resize(height, width, InterpolationMode.Bilinear);
         }
 
         #endregion
@@ -142,6 +142,9 @@ namespace ClothONNX
             }
         }
 
+        /// <summary>
+        /// Destructor.
+        /// </summary>
         ~ClothSegmentator()
         {
             Dispose(false);
