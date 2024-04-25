@@ -29,47 +29,61 @@ namespace ClothONNX
 
         /// <summary>
         /// Initializes cloth segmentator.
+        /// <param name="clothSegmentatorQuality">Cloth segmentator quality</param>
         /// </summary>
-        public ClothSegmentator()
+        public ClothSegmentator(ClothSegmentatorQuality clothSegmentatorQuality = ClothSegmentatorQuality.Medium)
         {
+            ClothSegmentatorQuality = clothSegmentatorQuality;
             _session = new InferenceSession(Resources.cloth_segmentation_unet);
         }
 
         /// <summary>
         /// Initializes cloth segmentator.
         /// </summary>
+        /// <param name="clothSegmentatorQuality">Cloth segmentator quality</param>
         /// <param name="options">Session options</param>
-        public ClothSegmentator(SessionOptions options)
+        public ClothSegmentator(SessionOptions options, ClothSegmentatorQuality clothSegmentatorQuality = ClothSegmentatorQuality.Medium)
         {
+            ClothSegmentatorQuality = clothSegmentatorQuality;
             _session = new InferenceSession(Resources.cloth_segmentation_unet, options);
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets or sets cloth segmentator quality.
+        /// </summary>
+        public ClothSegmentatorQuality ClothSegmentatorQuality { get; set; }
 
         #endregion
 
         #region Methods
 
         /// <inheritdoc/>
-        public float[,] Forward(Bitmap image)
+        public float[,] Forward(Bitmap image, InterpolationMode interpolationMode = InterpolationMode.Bilinear)
         {
             var rgb = image.ToRGB(false);
-            return Forward(rgb);
+            return Forward(rgb, interpolationMode);
         }
 
         /// <inheritdoc/>
-        public float[,] Forward(float[][,] image)
+        public float[,] Forward(float[][,] image, InterpolationMode interpolationMode = InterpolationMode.Bilinear)
         {
             if (image.Length != 3)
                 throw new ArgumentException("Image must be in BGR terms");
 
             var width = image[0].GetLength(1);
             var height = image[0].GetLength(0);
-            var size = new Size(768, 768);
+            var length = (int)ClothSegmentatorQuality;
+            var size = new Size(length, length);
 
             var resized = new float[3][,];
 
             for (int i = 0; i < image.Length; i++)
             {
-                resized[i] = image[i].ResizePreserved(size.Height, size.Width, 0.0f, InterpolationMode.Bilinear);
+                resized[i] = image[i].ResizePreserved(size.Height, size.Width, 0.0f, interpolationMode);
             }
 
             var dimentions = new int[] { 1, 3, size.Width, size.Height };
@@ -113,7 +127,7 @@ namespace ClothONNX
                 }
             }
 
-            return mask.ResizePreserved(height, width, InterpolationMode.Bilinear);
+            return mask.ResizePreserved(height, width, interpolationMode);
         }
 
         #endregion

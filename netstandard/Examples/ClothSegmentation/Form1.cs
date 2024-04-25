@@ -1,4 +1,5 @@
 using ClothONNX;
+using UMapx.Core;
 using UMapx.Imaging;
 
 namespace ClothSegmentation
@@ -17,7 +18,7 @@ namespace ClothSegmentation
             AllowDrop = true;
             Text = "ClothONNX: Cloth Segmentation";
 
-            _clothSegmentator = new ClothSegmentator();
+            _clothSegmentator = new ClothSegmentator(ClothSegmentatorQuality.High);
             var image = new Bitmap("example.png");
             Process(image);
         }
@@ -38,9 +39,12 @@ namespace ClothSegmentation
 
         private void Process(Bitmap image)
         {
-            var results = _clothSegmentator.Forward(image);
+            var results = _clothSegmentator.Forward(
+                image: image,
+                interpolationMode: InterpolationMode.Bicubic);
+
             using var mask = results.FromGrayscale();
-            var maskColorFilter = new MaskColorFilter(Color.Red);
+            var maskColorFilter = new MaskColorFilter(Color.Yellow);
             maskColorFilter.Apply(image, mask);
 
             BackgroundImage?.Dispose();
