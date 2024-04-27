@@ -6,7 +6,7 @@
     public enum ClothSegmentatorQuality
     {
         /// <summary>
-        /// Log quality.
+        /// Low quality.
         /// </summary>
         Low = 512,
         /// <summary>
