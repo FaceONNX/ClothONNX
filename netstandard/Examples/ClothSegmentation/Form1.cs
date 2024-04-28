@@ -48,6 +48,8 @@ namespace ClothSegmentation
             var maskColorFilter = new MaskColorFilter(Color.FromArgb(224, Color.Yellow));
             maskColorFilter.Apply(image, mask);
 
+            //image.Save("output.png", ImageFormat.Png);
+
             BackgroundImage?.Dispose();
             BackgroundImage = image;
         }
