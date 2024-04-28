@@ -45,7 +45,7 @@ namespace ClothSegmentation
                 interpolationMode: InterpolationMode.Bicubic);
 
             using var mask = results.FromGrayscale();
-            var maskColorFilter = new MaskColorFilter(Color.FromArgb(224, Color.Yellow));
+            var maskColorFilter = new MaskColorFilter(Color.FromArgb(192, Color.Yellow));
             maskColorFilter.Apply(image, mask);
 
             //image.Save("output.png", ImageFormat.Png);
