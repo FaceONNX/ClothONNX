@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <AssemblyName>ClothONNX</AssemblyName>
 	  <LangVersion>8.0</LangVersion>
-	  <Version>1.1.0.2</Version>
-	  <FileVersion>1.1.0.2</FileVersion>
+	  <Version>1.1.0.3</Version>
+	  <FileVersion>1.1.0.3</FileVersion>
 	  <Authors>Valery Asiryan</Authors>
 	  <Company>Valery Asiryan</Company>
 	  <Description>Cloth segmentation library based on deep neural networks and ONNX runtime.</Description>
@@ -13,7 +13,7 @@
 	  <RepositoryType>Open-source</RepositoryType>
 	  <PackageId>ClothONNX</PackageId>
 	  <Product>ClothONNX</Product>
-	  <AssemblyVersion>1.1.0.2</AssemblyVersion>
+	  <AssemblyVersion>1.1.0.3</AssemblyVersion>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageTags>cloth detection segmentation recognition onnx neural-networks unet</PackageTags>
 	  <RepositoryUrl>https://github.com/FaceONNX/ClothONNX</RepositoryUrl>
