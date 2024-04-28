@@ -1,4 +1,4 @@
-<p align="center"><img width="25%" src="../ClothONNX/ClothONNX.png" /></p>
+<p align="center"><img width="30%" src="../../docs/clothonnx_logo_scaled.png" /></p>
 <p align="center"> Cloth segmentation library based on deep neural networks and <b>ONNX</b> runtime </p>  
 
 # Cloth segmentation
