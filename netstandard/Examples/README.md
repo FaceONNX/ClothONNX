@@ -3,6 +3,6 @@
 
 # Cloth segmentation
 Build and run [ClothSegmentation.csproj](ClothSegmentation) to produce image processing results.
-<p align="center"><img width="70%" src="ClothSegmentation/example.png" /><img width="70%" src="ClothSegmentation/output.png" /></p>
+<p align="center"><img width="50%" src="ClothSegmentation/example.png" /><img width="50%" src="ClothSegmentation/output.png" /></p>
 <p align="center"><b>Figure 1.</b> Results for <i>example.png</i></p>  
 
