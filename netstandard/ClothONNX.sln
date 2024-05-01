@@ -5,8 +5,6 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothONNX", "ClothONNX\ClothONNX.csproj", "{9AD43A0F-45E1-4014-9BD4-BE790ED9D75D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothONNX.Gpu", "ClothONNX.Gpu\ClothONNX.Gpu.csproj", "{A1807A6F-D273-4B3B-BB42-EAB0AE6591BF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{9AD43A0F-45E1-4014-9BD4-BE790ED9D75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AD43A0F-45E1-4014-9BD4-BE790ED9D75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AD43A0F-45E1-4014-9BD4-BE790ED9D75D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1807A6F-D273-4B3B-BB42-EAB0AE6591BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1807A6F-D273-4B3B-BB42-EAB0AE6591BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1807A6F-D273-4B3B-BB42-EAB0AE6591BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1807A6F-D273-4B3B-BB42-EAB0AE6591BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

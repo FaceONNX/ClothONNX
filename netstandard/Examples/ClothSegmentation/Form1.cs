@@ -1,5 +1,4 @@
 using ClothONNX;
-using System.Drawing.Imaging;
 using UMapx.Core;
 using UMapx.Imaging;
 
@@ -48,7 +47,7 @@ namespace ClothSegmentation
             var maskColorFilter = new MaskColorFilter(Color.FromArgb(192, Color.Yellow));
             maskColorFilter.Apply(image, mask);
 
-            //image.Save("output.png", ImageFormat.Png);
+            //image.Save("output.png", System.Drawing.Imaging.ImageFormat.Png);
 
             BackgroundImage?.Dispose();
             BackgroundImage = image;

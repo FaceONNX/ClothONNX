@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothONNX", "..\ClothONNX\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothSegmentation", "ClothSegmentation\ClothSegmentation.csproj", "{A64B527C-0F76-45FE-A4C1-62CB274C6C87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothONNX.Gpu", "..\ClothONNX.Gpu\ClothONNX.Gpu.csproj", "{98B8AEF6-696A-41DD-B4E6-C36EFD35C1F8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{A64B527C-0F76-45FE-A4C1-62CB274C6C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A64B527C-0F76-45FE-A4C1-62CB274C6C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A64B527C-0F76-45FE-A4C1-62CB274C6C87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98B8AEF6-696A-41DD-B4E6-C36EFD35C1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98B8AEF6-696A-41DD-B4E6-C36EFD35C1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98B8AEF6-696A-41DD-B4E6-C36EFD35C1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98B8AEF6-696A-41DD-B4E6-C36EFD35C1F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
